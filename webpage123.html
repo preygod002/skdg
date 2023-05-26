@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SKD Pvt Ltd</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+    
+    h1 {
+      color: red;
+    }
+
+    #welcome-message {
+      text-align: center;
+      font-size: 2em;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function displayWelcomeMessage() {
+      var username = document.getElementById("username").value;
+      var welcomeMessage = "Welcome to SKD Pvt Ltd, " + username + "!";
+      document.getElementById("welcome-message").innerText = welcomeMessage;
+    }
+  </script>
+</head>
+<body>
+  <h1>SKD Pvt Ltd</h1>
+
+  <form onsubmit="displayWelcomeMessage(); return false;">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="email">Email ID:</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="welcome-message"></div>
+</body>
+</html>
